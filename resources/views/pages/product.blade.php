@@ -1,1 +1,1 @@
-@include('layouts.partials.nav')
+@extends('layouts.partials.master')

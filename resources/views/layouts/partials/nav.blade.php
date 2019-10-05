@@ -1,76 +1,40 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Fixed top navbar example · Bootstrap</title>
+<header id="header" class="fixed-top">
+    <div class="container">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/navbar-fixed/">
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
+      </div>
 
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="navbar-top-fixed.css" rel="stylesheet">
-  </head>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">RajRopes</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ URL('/home') }}">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ URL('/services') }}">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ URL('/contact') }}">Contact us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{route('my-product')}}">product</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ URL('/about') }}">about us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url('/faq') }}">FAQ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link enabled" href="{{url('/join')}}">join</a>
-      </li>
-    </ul>
-    <form class="form-inline mt-2 mt-md-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<body>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-      </body>
-</html>
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href='/'>Home</a></li>
+          <li><a href="{{URL('pages/about')}}">About Us</a></li>
+          <li><a href="{{URL('pages/product')}}">product</a></li>
+          <li><a href="{{URL('/services')}}">Services</a></li>
+          <li><a href="{{Route('faq')}}">FAQ</a></li>
+          <li><a href="{{Route('join')}}">Join</a></li>
+          <li class="drop-down"><a href="{{Route('services')}}">Services</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
