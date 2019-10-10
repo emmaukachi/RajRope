@@ -12,10 +12,10 @@
           <li class="active"><a href='/'>Home</a></li>
           <li><a href="{{URL('pages/about')}}">About Us</a></li>
           <li><a href="{{URL('pages/product')}}">product</a></li>
-          <li><a href="{{URL('/services')}}">Services</a></li>
+          <li><a href="{{URL('pages/services')}}">Services</a></li>
           <li><a href="{{Route('faq')}}">FAQ</a></li>
           <li><a href="{{Route('join')}}">Join</a></li>
-          <li class="drop-down"><a href="{{Route('services')}}">Services</a>
+        {{--   <li class="drop-down"><a href="{{Route('services')}}">Services</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="drop-down"><a href="#">Drop Down 2</a>
@@ -31,10 +31,10 @@
               <li><a href="#">Drop Down 4</a></li>
               <li><a href="#">Drop Down 5</a></li>
             </ul>
-          </li>
-          <li><a href="#contact">Contact Us</a></li>
+          </li>--}}
+          <li><a href="{{URL('pages/contact')}}">Contact Us</a></li> 
         </ul>
-      </nav><!-- .main-nav -->
+      </nav> <!--.main-nav--> 
       
     </div>
   </header><!-- #header -->

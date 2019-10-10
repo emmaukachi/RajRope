@@ -2,7 +2,7 @@
  <!--==========================
     Intro Section
   ============================-->
-  @section('main-content')
+@section('main-content')
   <section id="intro" class="clearfix">
   <div class="container">
 

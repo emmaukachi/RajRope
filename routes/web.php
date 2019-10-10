@@ -8,10 +8,11 @@ Route::prefix('pages')->group(function () {
     //Route::get('about', function () {
   
 Route::get('about','PagesController@about');
+Route::get('contact','PagesController@contact');
 Route::get('product','PagesController@product');
-Route::get('/faq','PagesController@faq')->name ('faq');
-Route::get('/join','PagesController@join')->name ('join');
-Route::get('/services','PagesController@services')->name ('services');
+Route::get('faq','PagesController@faq')->name ('faq');
+Route::get('join','PagesController@join')->name ('join');
+Route::get('services','PagesController@services')->name ('services');
 
          });
    // });

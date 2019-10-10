@@ -1,5 +1,6 @@
-@extends('layouts.partials.nav')
-
+@extends('layouts.partials.master')
+@include('layouts.partials.nav')
+@section('main-content')
 <section id="services" class="section-bg">
       <div class="container">
 
@@ -59,5 +60,6 @@
 
       </div>
     </section><!-- #services -->
+    @endsection
 
  
