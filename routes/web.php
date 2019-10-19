@@ -1,21 +1,21 @@
 <?php
 /*Route::group([
-    'prefix' => 'pages'
+'prefix' => 'pages'
 ],function(){*/
 
-Route::get('/','PagesController@index');
+Route::get('/', 'pagesController@index');
 Route::prefix('pages')->group(function () {
-    //Route::get('about', function () {
-  
-Route::get('about','PagesController@about');
-Route::get('contact','PagesController@contact');
-Route::get('product','PagesController@product');
-Route::get('faq','PagesController@faq')->name ('faq');
-Route::get('join','PagesController@join')->name ('join');
-Route::get('services','PagesController@services')->name ('services');
+		//Route::get('about', function () {
 
-         });
-   // });
+		Route::get('about', 'pagesController@about');
+		Route::get('contact', 'pagesController@contact');
+		Route::get('product', 'pagesController@product');
+		Route::get('faq', 'pagesController@faq')->name('faq');
+		Route::get('join', 'pagesController@join')->name('join');
+		Route::get('services', 'pagesController@services')->name('services');
+
+	});
+// });
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +34,6 @@ Route::get('services','PagesController@services')->name ('services');
 // 	return view('pages.services');
 // });
 
-
 // Route::get('/contact',function(){
 // 	return view('pages.contact');
 // });
@@ -45,7 +44,7 @@ Route::get('services','PagesController@services')->name ('services');
 
 // Route::get('/product',function() {
 // 	return view('pages.product');
-	
+
 // })->name('my-product');
 
 // Route::get('/faq',function(){
@@ -55,7 +54,3 @@ Route::get('services','PagesController@services')->name ('services');
 // Route::get('/join',function(){
 // 	return view('pages.join');
 // });
-
-
-
-
