@@ -9,6 +9,7 @@ Route::prefix('pages')->group(function () {
 
 		Route::get('about', 'pagesController@about');
 		Route::get('contact', 'pagesController@contact');
+		Route::post('add-contact','pagesController@createContact');
 		Route::get('product', 'pagesController@product');
 		Route::get('faq', 'pagesController@faq')->name('faq');
 		Route::get('join', 'pagesController@join')->name('join');

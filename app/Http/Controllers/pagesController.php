@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Contact;
+use Illuminate\Http\Request;
 
 class pagesController extends Controller {
 	public function index() {
@@ -16,18 +18,7 @@ class pagesController extends Controller {
 	}
 
 	public function contact() {
-		//     // Laravel validation
-		//     $this->validate($request,[
-		//         'name'=>'required',
-		//         'email'=>'required',
-		//         'subject'=>'required',
-		//         'message'=>'required'
-		// ]);
-		//   $team =new Team;
-		//   $team->team_name = $request->team_name;
-		//   $team->team_description = $request->team_description;
-		//   $team->department_id = $request->department_id;
-		//   $permission->save();
+	
 		return view('pages.contact');
 	}
 
@@ -41,5 +32,20 @@ class pagesController extends Controller {
 
 	public function services() {
 		return view('pages.services');
+	}
+	public function createContact(Request $request) {
+           $this->validate($request,[
+		   		 'name'=>'required',
+		         'email'=>'required',
+		         'subject'=>'required',
+		         'message'=>'required'
+		 ]);
+		   $contact =new Contact;
+		   $contact->name = $request->name;
+		   $contact->email = $request->email;
+		   $contact->subject = $request->subject;
+		   $contact->message = $request->message;
+		  $contact->save();
+		  return back()->with('success','Your message has been sent. Thank you!');
 	}
 }
