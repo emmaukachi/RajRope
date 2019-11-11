@@ -11,31 +11,39 @@ class ContactsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('contact_us')->insert([
+        DB::table('contacts')->insert([
         	[
         		'name'=>'daniel jones',
         		'email'=>'dani@gmail.com',
         		'subject'=>'daniel jones',
-        		'message'=>'dani',
-        		'phoneNum'=>'09076453627'
+        		'message'=>'dani'
+        		//'phoneNum'=>'09076453627'
         		
             ],
             [
         		'name'=>'jones',
         		'email'=>'jones@gmail.com',
         		'subject'=>'ddjfjue jones',
-        		'message'=>'eheidjkei',
-        		'phoneNum'=>'0907483763849'
+        		'message'=>'eheidjkei'
+        		//'phoneNum'=>'0907483763849'
         		
             ],
             [
         		'name'=>'sani',
         		'email'=>'sani@gmail.com',
         		'subject'=>'eiejdueik, jsjw',
-        		'message'=>'dani kedd',
-        		'phoneNum'=>'090766448399'
+        		'message'=>'dani kedd'
+        		//'phoneNum'=>'090766448399'
         		
-            ]
+			],
+			//[
+			//	'name' => Str::random(10),
+			//	'email' => Str::random(10).'@gmail.com',
+			//	'subject' => Str::random(10),
+			//	'message' => Str::random(10),
+			//	'phoneNum' => Str::random(10),
+				//'password' => bcrypt('password')
+			//]
         ]);
     }
 }
