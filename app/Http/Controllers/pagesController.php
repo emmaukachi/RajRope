@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Contact;
+use App\Customer;
 use Illuminate\Http\Request;
 
 class pagesController extends Controller {
@@ -48,19 +49,19 @@ class pagesController extends Controller {
 		  $contact->save();
 		  return back()->with('success','Your message has been sent. Thank you!');
 	}
-	public function createJoin(Request $request) {
+	public function createCustomer(Request $request) {
 				 $this->validate($request,[
 				 'name'=>'required',
 			  	 'email'=>'required',
-			  	 'subject'=>'required',
-			  	 'message'=>'required'
+			  	 'contact'=>'required',
+			  	 'address'=>'required'
 	  ]);
 		$Customer =new Customer;
 		$Customer->name = $request->name;
 		$Customer->email = $request->email;
-		$Customer->subject = $request->subject;
-		$Customer->message = $request->message;
+		$Customer->contact = $request->contact;
+		$Customer->address = $request->address;
 	   $Customer->save();
-	   return back()->with('success','Your message has been sent. Thank you!');
+	   return back()->with('success','Your registration was successful. Thank you!');
  }
 }

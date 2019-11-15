@@ -57,7 +57,7 @@
                   @endif
               </div>
               <!--div id="errormessage"></div-->
-              <form action="{{url('/pages/add-contact')}}"" method="post" role="form" >
+              <form action="{{url('/pages/add-join')}}"" method="post" role="form" >
 
                 {{csrf_field()}}
 
@@ -75,16 +75,16 @@
 
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="form-control" name="contact" id="contact" placeholder="Your Contact" data-rule="minlen:4" data-msg="Please give us your contact" />
                   <div class="validation"></div>
                 </div>
 
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" name="address" rows="5" data-rule="required" data-msg="Please enter your address" placeholder="Address"></textarea>
                   <div class="validation"></div>
                 </div>
 
-                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+                <div class="text-center"><button type="submit" title="Register">Register</button></div>
 
               </form>
             </div>
