@@ -13,6 +13,7 @@ Route::prefix('pages')->group(function () {
 		Route::get('product', 'pagesController@product');
 		Route::get('faq', 'pagesController@faq')->name('faq');
 		Route::get('join', 'pagesController@join')->name('join');
+		Route::post('add-join','pagesController@createJoin');
 		Route::get('services', 'pagesController@services')->name('services');
 
 	});

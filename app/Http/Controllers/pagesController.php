@@ -48,4 +48,19 @@ class pagesController extends Controller {
 		  $contact->save();
 		  return back()->with('success','Your message has been sent. Thank you!');
 	}
+	public function createJoin(Request $request) {
+				 $this->validate($request,[
+				 'name'=>'required',
+			  	 'email'=>'required',
+			  	 'subject'=>'required',
+			  	 'message'=>'required'
+	  ]);
+		$Customer =new Customer;
+		$Customer->name = $request->name;
+		$Customer->email = $request->email;
+		$Customer->subject = $request->subject;
+		$Customer->message = $request->message;
+	   $Customer->save();
+	   return back()->with('success','Your message has been sent. Thank you!');
+ }
 }
